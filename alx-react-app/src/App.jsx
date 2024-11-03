@@ -1,11 +1,8 @@
-import WelcomeMessage from '.components/WelcomeMessage';
+
 import React from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,10 +16,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="Vite logo" />
         </a>
-        <WelcomeMessage />
-        <Header />
-        <MainContent />
-        <Footer />
+        
       </div>
       <h1>Hello everyone, I am learning learning React at ALX!</h1>
       <div className="card">
