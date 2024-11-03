@@ -1,4 +1,4 @@
-import WelcomeMessage from './WelcomeMessage'
+import WelcomeMessage from './assets/components/WelcomeMessage'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -15,6 +15,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="Vite logo" />
         </a>
+        <WelcomeMessage />
       </div>
       <h1>Hello everyone, I am learning learning React at ALX!</h1>
       <div className="card">
