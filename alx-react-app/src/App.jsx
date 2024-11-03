@@ -1,11 +1,11 @@
-import WelcomeMessage from './assets/components/WelcomeMessage';
+import WelcomeMessage from '.components/WelcomeMessage';
 import React from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './assets/components/Header';
-import MainContent from './assets/components/MainContent';
-import Footer from './assets/components/Footer';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
