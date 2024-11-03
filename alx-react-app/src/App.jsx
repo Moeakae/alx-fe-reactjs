@@ -3,6 +3,9 @@ import React from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './assets/components/Header';
+import MainContent from './assets/components/MainContent';
+import Footer from './assets/components/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +20,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="Vite logo" />
         </a>
         <WelcomeMessage />
+        <Header />
+        <MainContent />
+        <Footer />
       </div>
       <h1>Hello everyone, I am learning learning React at ALX!</h1>
       <div className="card">
