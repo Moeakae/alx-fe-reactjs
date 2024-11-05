@@ -7,3 +7,4 @@ function WelcomeMessage() {
         </div>
     )
 }
+export default WelcomeMessage;
