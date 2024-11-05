@@ -1,5 +1,5 @@
-import react from 'react';
-function footer() {
+
+function Footer() {
 return(
 
 
@@ -8,4 +8,4 @@ return(
 </footer>
 );
 }
-export default footer;
+export default Footer;
