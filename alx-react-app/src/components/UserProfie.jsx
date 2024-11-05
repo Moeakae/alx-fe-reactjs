@@ -1,3 +1,4 @@
+import React from "react";
 function UserProfile() {
     const UserProfile = (props) => {
         return (
