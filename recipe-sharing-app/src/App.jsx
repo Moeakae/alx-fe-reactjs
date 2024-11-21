@@ -1,6 +1,10 @@
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
-
+import { useRecipeStore } from '../component/recipeStore';
+import { BrowserRouter as Router, Routes, Route } from 'react- router-dom';
+import RecipeDetails from './components/RecipeDetails';
+import EditRecipeForm from './components/EditRecipeForm';
+import DeleteRecipe from './components/DeleteRecipeButton';
 import './App.css'
 
 const App = () => {
@@ -13,10 +17,14 @@ const App = () => {
         <h3 className='text-2x1 font- semibold'>Recipes Tracker</h3>
       </div>
      </div>
-     
+      
       <RecipeList />
       <AddRecipeForm />
+      <EditRecipeForm />
+      <DeleteRecipe />
+      <RecipeDetails />
      </div>
+    
   
   )
 }
