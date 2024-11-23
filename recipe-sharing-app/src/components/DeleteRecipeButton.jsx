@@ -2,7 +2,7 @@ import { useRecipeStore } from './recipeStore';
 import { useParams, useNavigate } from 'react-router-dom';
 const DeleteRecipe = () => {
     const { id } = useParams();
-    const DeleteRecipe = useRecipeStore((state) => state.DeleteRecipe);
+    const deleteRecipe = useRecipeStore((state) => state.DeleteRecipe);
     const navigate = useNavigate();
     const handleDelete = () => {
     deleteRecipe(Number(id));
