@@ -7,26 +7,17 @@ import EditRecipeForm from './components/EditRecipeForm';
 import DeleteRecipe from './components/DeleteRecipeButton';
 import './App.css'
 
-const App = () => {
-  
-
-  return (
-     <div className='flex justify-center items-center h-screen'>
-     <div className='w-96 p-6 rounded-1g shadow-md bg-white text-center'>
-      <div className='mb-6'>
-        <h3 className='text-2x1 font- semibold'>Recipes Tracker</h3>
-      </div>
-     </div>
-      
-      <RecipeList />
-      <AddRecipeForm />
-      <EditRecipeForm />
-      <DeleteRecipe />
-      <RecipeDetails />
-     </div>
-    
-  
-  )
+function App() {
+   return (
+     <Router>
+        <Routes>
+          <Route path='/' element={<RecipeList />} />
+          <Route path='/add' element={<AddRecipeForm />} />
+          <Route path='/recipe/:id' element={<RecipeDetails />} />
+          <Route path='/edit/:id' element={<EditRecipeForm />} />
+          <Route path='/delete/:id'  element={<DeleteRecipe />} />
+        </Routes>
+     </Router>
+   )
 }
-
 export default App;
