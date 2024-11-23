@@ -19,14 +19,14 @@ if (!recipe) {
     return <p>Recipe not found!</p>
 };
 return (
-    <div>
+    
      <from onSubmit={handleSubmit}>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
      
      <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
         <button type="submit">Save Changes</button>
      </from>
-     </div>
+     
 );
 };
 export default EditRecipeForm;
