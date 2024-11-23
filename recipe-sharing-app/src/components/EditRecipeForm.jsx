@@ -14,10 +14,10 @@ const handleSubmit = (event) => {
     event.preventDefault();
     updateRecipe({ id: recipe.id, title, description });
     navigate('/recipe/${id}');
-}
+};
 if (!recipe) {
     return <p>Recipe not found!</p>
-}
+};
 return (
     <div>
      <from onSubmit={handleSubmit}>
