@@ -10,6 +10,7 @@ import './App.css'
 function App() {
    return (
      <Router>
+      <div>
         <Routes>
           <Route path='/' element={<RecipeList />} />
           <Route path='/add' element={<AddRecipeForm />} />
@@ -17,6 +18,7 @@ function App() {
           <Route path='/edit/:id' element={<EditRecipeForm />} />
           <Route path='/delete/:id'  element={<DeleteRecipe />} />
         </Routes>
+        </div>
      </Router>
    )
 }
