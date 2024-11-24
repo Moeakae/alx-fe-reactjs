@@ -1,6 +1,6 @@
 import useRecipeStore from '../recipeStore';
 const FavoritesList = () => {
-    const favorites = useRecipeStore((state) =>
+    const Favorites = useRecipeStore((state) =>
         state.favorites.map((id)
          state.recipes.find((recipe) => recipe.id === id)
 ))
