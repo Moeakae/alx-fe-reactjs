@@ -4,7 +4,7 @@ const RecipeList = () => {
     const recipes = useRecipeStore((state) => state.filteredRecipes);
     return (
         <div>
-        {recipes.map(recipe => (
+        {recipes.map((recipe) => (
             <div key={recipe.id}>
                 <h3>{recipe.title}</h3>
                 <p>{recipe.desciption}</p>
