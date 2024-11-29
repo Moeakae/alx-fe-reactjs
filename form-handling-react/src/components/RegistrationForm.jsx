@@ -14,7 +14,7 @@ const handleSubmit = (e) => {
     e.preventDefault();
     const { username, email, password } = formData;
     if (!username || !email || !password) { 
-        setError("");
+        setError("All fields are required");
     } else {
         setError("");
         console.log("Submitted Data:", formData);
