@@ -12,7 +12,7 @@ const handleChange = (e) => {
 };
 const handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password } = formData;
+    const { username, email, password } = this.state;
     if (!username || !email || !password) { 
         setError("All fields are required");
     } else {
