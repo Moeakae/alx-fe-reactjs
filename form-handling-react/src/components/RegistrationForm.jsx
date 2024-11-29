@@ -13,7 +13,7 @@ const handleChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault();
     const { username, email, password } = formData;
-    if ("!username || !email || !password") { 
+    if (!username || !email || !password) { 
         setError("");
     } else {
         setError("");
