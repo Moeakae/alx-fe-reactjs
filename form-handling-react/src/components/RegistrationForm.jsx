@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
         "value = {username}": "",
         "value = {email}": "",
         "value = {password}": "",
     });
+
+    
 const [error, setError] = useState("");
 
 const handleChange = (e) => {
@@ -14,7 +16,8 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password } = formData;
+    const { username, email, password } = useForm<formData>
+   useEffect(() => {
     if (!username || !email || !password) { 
         setError("All fields are required!");
     } else {
@@ -22,8 +25,9 @@ const handleSubmit = (e) => {
         console.log("Submitted Data:", formData);
         // Simulate API call
         alert("User registered successfully!");
+     
 }
-};
+});
 return (
     <form onSubmit={handleSubmit}>
         <h2>User Registration</h2>
@@ -41,9 +45,10 @@ return (
             <input type="password" name="password" value={password} onChange={handleChange} required />
         </div>
         <div>
-            <button type="submit">Register</button>
+            <button onClick={onSubmit}>Register</button>
         </div>
     </form>
 );
+};
 };
 export default RegistrationForm;
