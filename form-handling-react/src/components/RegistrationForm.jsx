@@ -28,15 +28,15 @@ return (
         {error && <p style={{ color: "red" }}>{error}</p>}
         <div>
             <labe>Username:</labe> 
-            <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+            <input type="text" name="username" value={username} onChange={handleChange} required />
         </div>
         <div>
             <label>Email:</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+            <input type="email" name="email" value={email} onChange={handleChange} required />
         </div>
         <div>
             <label>Password:</label>
-            <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+            <input type="password" name="password" value={password} onChange={handleChange} required />
         </div>
         <div>
             <button type="submit">Register</button>
