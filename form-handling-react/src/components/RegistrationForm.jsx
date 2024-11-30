@@ -1,35 +1,22 @@
 import  { useState } from "react";
-const RegistrationForm = () => {
-    const [formData, setFormData] = useState({
-        "value = {username}": "",
-        "value = {email}": "",
-        "value = {password}": "",
-    });
-
-    
-const [error, setError] = useState("");
-
-const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-};
-
-const handleSubmit = (e) => {
-    e.preventDefault();
-    const { username, email, password } = useForm<formData>
-   useEffect(() => {
-    if (!username || !email || !password) { 
-        setError("All fields are required!");
-    } else {
-        setError("");
-        console.log("Submitted Data:", formData);
-        // Simulate API call
-        alert("User registered successfully!");
-     
-}
-});
-return (
-    <form className="registration-form" onSubmit={handleSubmit}>
+     const RegistrationForm = () => { 
+        const [name, setname] = useState("");
+        const [email, setemail] = useState("");
+        const [password, setpassword] = useState("");
+        const handleSubmit = (event) => { 
+            event.preventDefault();
+            console.log(email);
+        };
+        const handleName = (event) => { 
+            setname(event.target.value);
+        };
+        const handleEmail = (event) => { 
+            setemail(event.target.value);
+        };
+        const handlePassword = (event) => { 
+            setpassword(event.target.value);
+        return (
+       <form className="registration-form" onSubmit={handleSubmit}>
         <h2>User Registration</h2>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <div>
