@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useState } from "react";
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
         "value = {username}": "",
@@ -29,20 +29,20 @@ const handleSubmit = (e) => {
 }
 });
 return (
-    <form onSubmit={handleSubmit}>
+    <form className="registration-form" onSubmit={handleSubmit}>
         <h2>User Registration</h2>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <div>
             <labe>Username:</labe> 
-            <input type="text" name="username" value={username} onChange={handleChange} required />
+            <input type="text" name="username" value={username} onChange={handleName} required />
         </div>
         <div>
             <label>Email:</label>
-            <input type="email" name="email" value={email} onChange={handleChange} required />
+            <input type="email" name="email" value={email} onChange={handleEmail} required />
         </div>
         <div>
             <label>Password:</label>
-            <input type="password" name="password" value={password} onChange={handleChange} required />
+            <input type="password" name="password" value={password} onChange={handlePassword} required />
         </div>
         <div>
             <button onClick={onSubmit}>Register</button>
