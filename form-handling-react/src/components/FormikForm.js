@@ -1,7 +1,7 @@
-import React from "react";
+
 import { useFormik } from "formik";
 import *as Yup from "yup";
-const formik = () => {
+const RegistrationForm = () => {
     const formik = useFormik({
         initialValues: {
             username: "",
@@ -39,8 +39,8 @@ return (
                 <p style={{ color: 'red'}}>{formik.errors.password}</p>
             ) : null}
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">Submit</button>
     </form>
 );
-};
+}
 export default FormikForm;
