@@ -18,6 +18,12 @@ import React, { useState } from "react";
             }
                return null;
         }
+        const validatePassword = (password) => {
+            if (!password.trim() ==='') { 
+                return 'password recovery.'
+            }
+            
+        }
     
         const handleNameChange = (event) => { 
             setname(event.target.value);
