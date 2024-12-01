@@ -4,7 +4,7 @@ import { render, screen, fireEvent } from  '@testing-library/react';
  import TodoList from "../components/TodoList";
 
  test('render initial todos', () => {
-    render(<Todolist />);
+    render(<Todos />);
     expect(screen.getByText('Learn React')).toBeInTheDocument();
     expect(screen.getByText('Build a Todo App')).toBeInTheDocument();
  });
