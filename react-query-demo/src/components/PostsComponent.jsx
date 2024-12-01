@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
 const fetchPosts = async () => {
-    const response = await fetch('https://jsonplaceholde.typicode.com/posts');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     if (!response.ok) throw new isError('Networkrespond was not ok');
     return response.json();
 };
