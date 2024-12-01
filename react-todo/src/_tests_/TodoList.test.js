@@ -2,15 +2,15 @@ import React from "react";
 import { render, screen, fireEvent } from  '@testing-library/react';
  import '@testing-library/jest-dom';
  import TodoList from "../components/TodoList";
-
+describe('TodoList', () { 
  test('render initial todos', () => {
-    render(<Todos />);
-    expect(screen.getByText('Learn React')).toBeInTheDocument();
+    render(<TodoList />);
+    const input = screen.getByText('TodoList')
     expect(screen.getByText('Build a Todo App')).toBeInTheDocument();
  });
  test('adds a new todo', () => {
      render(<TodoList />);
-     const input = screen.getByPlaceholderText('Add a new todo');
+     const elem = screen.getByPlaceholderText('Add a new todo');
      const addButton = screen.getByText('Add');
      expect(screen.getByText('New Todo')).toBeInTheDocument();
  });
@@ -28,3 +28,4 @@ import { render, screen, fireEvent } from  '@testing-library/react';
     fireEvent.click(deleteButton);
     expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
  });
+});
