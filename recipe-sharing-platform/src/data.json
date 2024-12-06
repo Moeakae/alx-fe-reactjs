@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "Spaqhetti Carbonara",
+        "summary": "A classic Italian pasta dish with egg, cheese, bacon, and black pepper.",
+        "image": "https://picsum.photo/200/300/?blur = 2",
+        "ingredients":["200g spaqhetti", "2 large egg", "100g pancetta", "50g pecorino cheese", "Black pepper"],
+        "instructions": [
+            ":Cook the spaqhettiin salted boiling water until al dente.",
+            "Fry the pancetta in a pan until crisp",
+            "Beat the eggs in a bowl, then mix with chesse and pepper.",
+            "Combine the drained spaqhetti with the pancetta and revome from heat.",
+            "quickly mix in the egg mixture, tossing until creamy."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Chicken Tikka Masala",
+        "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+        "image":"https://picsum.photo/300/200",
+        "ingredients": ["500g chicken breast", "2 tbsp yourt", "1 tbsp tikka masala spice mix", "200ml tomato pure", "100ml cream"],
+        "instructions": [
+            "Marinate chicken with yogurt and and tikka masala spice mix for 2 hours.",
+            "Grill the chicken until cooked through.",
+            "Heat tomato puree in a pan and stir in the cream.",
+            "Add grilled chicken pieces and simmer for 10 minutes.",
+            "Serve with rice or naan bread."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Avacodo Toast",
+        "summary": "A healthy and quck recipe with avocadoand toast.",
+        "image": "https://picsum.photo/200/300/?blur = 2"
+    }
+]
