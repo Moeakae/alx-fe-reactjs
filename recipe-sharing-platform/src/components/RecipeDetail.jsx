@@ -31,9 +31,9 @@ const RecipeDetail = () => {
                     <li key={index}>{ingredient}</li>
                 ))}
             </ul>
-            <h2 className="text-xl font-semibold mb-4">Cooking Instruction:</h2>
+            <h2 className="text-xl font-semibold mb-4">Cooking Instructions:</h2>
             <ol className="list-decimal list-inside space-y-2">
-                {recipe.instruction.map((step, index) => (
+                {recipe.instructions.map((step, index) => (
                     <li key={index}>{step}</li>
                  ))}
             </ol>
