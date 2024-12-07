@@ -26,11 +26,6 @@
             "Add grilled chicken pieces and simmer for 10 minutes.",
             "Serve with rice or naan bread."
         ]
-    },
-    {
-        "id": 3,
-        "title": "Avacodo Toast",
-        "summary": "A healthy and quck recipe with avocadoand toast.",
-        "image": "https://picsum.photo/200/300/?blur = 2"
     }
+    
 ]
