@@ -13,7 +13,7 @@ const API_KEY = process.env.API_KEY;
                     'Autherization': 'Bearer ${API_KEY}',
                 },
                 params: params,
-            }),
+            })
             return response.data;
         }catch (error) {
             console.error('Error fetching data from ${endpoint}:', error);
