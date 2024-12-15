@@ -1,4 +1,6 @@
 import React, { useState} from "react";
+
+
 import { fetchUserData } from "../services/Githubservice";
 
 const Search = () => {
@@ -28,6 +30,11 @@ const Search = () => {
             </form>
             {loading && <p>Loading...</p>}
             {login && <p>{login}</p>}
+            <ul>
+                {results.map((item, index) = (
+                    <li key={index}>{item.name}</li>
+                ))}
+            </ul>
             {userData && (
                 <div>
                     <img src="{userData.avatar-url} alt={userData.name}"/>
