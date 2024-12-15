@@ -1,4 +1,4 @@
-import fetchGitHubData from './services/githubService',
+import fetchGitHubData from './services/githubService';
 
 const axios = require('axios');
 const qs = require('qs')
@@ -50,3 +50,4 @@ module.exports = {
     postData,
     complexApiWorkFlow,
 };
+export default fetchGitHubData;
