@@ -4,4 +4,4 @@ const fetchUserData = async (username) => {
     const respond = await axios.get('https://api.github.com/users/${username}');
     return respond.data;
 };
-export default  fetchUserData;
+export { fetchUserData};
