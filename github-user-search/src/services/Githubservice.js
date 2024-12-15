@@ -1,4 +1,4 @@
-
+import fetchGitHubData from './services/githubService',
 
 const axios = require('axios');
 const qs = require('qs')
