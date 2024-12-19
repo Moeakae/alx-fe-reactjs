@@ -1,5 +1,5 @@
 import fetchGitHubData from './services/githubService';
-
+const githubService = () => { 
 const axios = require('axios');
 const qs = require('qs')
 const { processData, transformData } = require('./utils');
@@ -49,5 +49,6 @@ module.exports = {
     fetchData,
     postData,
     complexApiWorkFlow,
+};
 };
 export default fetchGitHubData;
