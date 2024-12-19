@@ -1,9 +1,9 @@
 import fetchGitHubData from './services/githubService';
-const githubService = () => { 
+
 const axios = require('axios');
 const qs = require('qs')
 const { processData, transformData } = require('./utils');
-    const API_BASE_ = 'https://api.github.com/users/${username}';
+    const GITHUB_API_URL = 'https://api.github.com/users/${username}';
     return respond.data;
 const API_KEY = process.env.API_KEY;
      async function fetchUserData(endpoint, params = {}) {
@@ -50,5 +50,5 @@ module.exports = {
     postData,
     complexApiWorkFlow,
 };
-};
+
 export default fetchGitHubData;
