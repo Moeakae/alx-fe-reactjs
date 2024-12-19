@@ -1,23 +1,24 @@
 import fetchGitHubData from './services/githubService';
-
-const axios = require('axios');
-const qs = require('qs')
-const { processData, transformData } = require('./utils');
-    const GITHUB_API_URL = 'https://api.github.com/users/${username}';
+const GITHUB_API_URL = 'https://api.github.com';
+const GITHUB_TOKEN = 'your_github_token';
     return respond.data;
 const API_KEY = process.env.API_KEY;
-     async function fetchUserData(endpoint, params = {}) {
-        try {
-            const response = await axios.get('${API_BASE_URL}${endpoint}', {
-                headers: {
-                    'Autherization': 'Bearer ${API_KEY}',
-                },
-                params: params,
-            })
-            return response.data;
+     async function makeRequest(url) {
+
+               const headers = {
+                    'Autherization': 'Bearer ${GITHUB_TOKEN}',
+                    'Content-Type': 'application/json',
+                };
+                try {
+                    const response = await fetch(url, { headers }); 
+                if (!response.ok) {
+                    throw new Error('GitHub API error: ${response.statusText}');
+                }
+            
+            return await response.json();
         }catch (error) {
-            console.error('Error fetching data from ${endpoint}:', error);
-            throw new Error('API request failed: ${error.response ? error.response.data : error.message}');
+            console.error(error);
+            return null;
         }
      }
      async function postData(endpoint, data) {
@@ -28,27 +29,24 @@ const API_KEY = process.env.API_KEY;
                     'Content-Type': 'applicition/json',
                 },
             });
-            return response.data;
+            return await makeRequest(url);
         } catch (error) {
             console.error('Error posting data to ${endpoint}:', error);
             throw new Error('API request failed: ${error.response ? error.respose.data :error.message}')
         }
      }
      async function complexApiWorkFlow() {
-        try {
+        
             const initialData = await fetchData('/some-endpoint', { queryParams: 'value' });
             const transformedData = transformData(initialData);
             const result = await postData('/another-endpoint', transformedData);
-            return result;
-        } catch (error) {
+            return await makeRequest(url);
+            if (repos) { 
+                console.log(repos);
+        } else { 
             console.error('Error in complex API workflow:', error);
             throw error;
-        }
-     }
-module.exports = {
-    fetchData,
-    postData,
-    complexApiWorkFlow,
-};
-
-export default fetchGitHubData;
+        
+}
+} 
+ fetchGitHubData();
