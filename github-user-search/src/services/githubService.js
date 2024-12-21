@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import githubService from './services/githubService';
+import fetchUserData from './services/githubService';
 const GITHUB_API_URL = 'https://api.github.com/search/users?q';
 const GITHUB_TOKEN = 'your_github_token';
     return respond.data;
@@ -11,7 +11,7 @@ const API_KEY = process.env.API_KEY;
                     'Content-Type': 'application/json',
                 };
                 try {
-                    const response = await fetch(url, { headers }); 
+                    const response = await get(url, { headers }); 
                 if (!response.ok) {
                     throw new Error('GitHub API error: ${response.statusText}');
                 }
@@ -50,4 +50,4 @@ const API_KEY = process.env.API_KEY;
         
 }
 } 
- export default githubService;
+ export default fetchUserData;
