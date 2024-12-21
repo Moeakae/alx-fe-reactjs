@@ -1,4 +1,4 @@
-import fetchGitHubData from './services/githubService';
+import fetchgithubService from './services/githubService';
 const GITHUB_API_URL = 'https://api.github.com';
 const GITHUB_TOKEN = 'your_github_token';
     return respond.data;
@@ -49,4 +49,4 @@ const API_KEY = process.env.API_KEY;
         
 }
 } 
- fetchGitHubData();
+ fetchgithubService();
