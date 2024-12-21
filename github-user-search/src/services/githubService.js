@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import githubService from './services/githubService';
-const GITHUB_API_URL = 'https://api.github.com';
+const GITHUB_API_URL = 'https://api.github.com/search/users?q';
 const GITHUB_TOKEN = 'your_github_token';
     return respond.data;
 const API_KEY = process.env.API_KEY;
